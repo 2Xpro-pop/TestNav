@@ -17,7 +17,7 @@ script = ExtResource("1_0e48y")
 CellSize = 55.0
 WorldBounds = Rect2(-2000, -2000, 4000, 4000)
 Budget = 1000.0
-DrawPolygonBounds = true
+DrawPolygonBounds = false
 
 [node name="Icon" type="Sprite2D" parent="CharacterBody2D"]
 texture = ExtResource("1_wtcfe")

@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://cumn44851eg7i"]
+
+[ext_resource type="Script" uid="uid://dem2frx75wxpc" path="res://ExplorationHero.cs" id="1_0e48y"]
+[ext_resource type="Texture2D" uid="uid://c3qgqbha0g777" path="res://icon.svg" id="1_wtcfe"]
+[ext_resource type="Script" uid="uid://dq6kb4ucb38bg" path="res://CustomNavigationRegion2D.cs" id="3_epypp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0e48y"]
+size = Vector2(120, 118)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.5, 0.5)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_0e48y")
+CellSize = 55.0
+WorldBounds = Rect2(-2000, -2000, 4000, 4000)
+Budget = 1000.0
+DrawPolygonBounds = true
+
+[node name="Icon" type="Sprite2D" parent="CharacterBody2D"]
+texture = ExtResource("1_wtcfe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_0e48y")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="CharacterBody2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(445, 193)
+script = ExtResource("3_epypp")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PackedVector2Array(-461.39813, -113.96973, 30, -30, 55, 20, -701.1888, 146.53223)

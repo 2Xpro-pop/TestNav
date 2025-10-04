@@ -2,10 +2,6 @@ using Godot;
 using System;
 using System.Collections.Generic;
 
-using Godot;
-using System;
-using System.Collections.Generic;
-
 public sealed partial class ArmyRange2D : CharacterBody2D
 {
     // === Scene refs ===
